@@ -10,7 +10,7 @@ def longestNiceSubstring(s):
     l = 0
     r = 1
     
-    while l < len(s):
+    while l < len(s) - 1:
         if s[l].lower() == s[r].lower():
             result += s[l]
             l += 1
@@ -19,7 +19,7 @@ def longestNiceSubstring(s):
             r += 1
     return result
 
-new_string = 'Bb'
+new_string = "Bb"
 # print(longestNiceSubstring(new_string))
 
 # ========================================================
@@ -54,7 +54,13 @@ def shortestSub(arr, k):
     return min_length
 
 
-arr1 = [1, 2, 3, 4, 5, 6]
-k1 = 7
+# arr1 = [1, 2, 3, 4, 5, 6]
+# k1 = 7
 
-print(shortestSub(arr1, k1))
+# print(shortestSub(arr1, k1))
+
+
+
+# name = 'Juan Tejeda'
+
+# print(range(len(name)))
