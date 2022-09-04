@@ -28,3 +28,5 @@ def playGame():
     return random.choice(gameList)
 
 print(playGame())
+time.sleep(3)
+input('Press ENTER to exit.')

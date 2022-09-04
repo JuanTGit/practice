@@ -41,6 +41,6 @@ def twoSum(array, target):
             r -= 1
     return f'There are no indices that sum your target'
 
-nums = [2,7,11,15]
+nums = [-1,-2,-3,-4,-5]
 
-print(twoSum(nums, 9))
+print(twoSum(nums, -8))

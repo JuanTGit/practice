@@ -49,7 +49,7 @@ class LinkedList:
         self.value = value
         self.next = None
 
-#AlgoExpert SOlution to remove dupes
+#AlgoExpert Solution to remove dupes
 def removeDuplicatesFromLinkedList(LinkedList):
 	if not LinkedList:
 		return None
@@ -66,3 +66,4 @@ def removeDuplicatesFromLinkedList(LinkedList):
 		else:
 			current = current.next
 	return LinkedList
+
