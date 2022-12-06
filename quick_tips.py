@@ -4,6 +4,9 @@
 
 """len()"""
 # Returns an integer for the length of the iterable
+import enum
+
+
 name = 'Juan T.'
 chars = len(name)
 print(chars)
@@ -82,3 +85,9 @@ for count, ele in enumerate(l3):
 # sleep
 # 2
 # repeat
+
+
+alist = [2,7,11,15]
+
+for i, num in enumerate(alist):
+    print(i, num)

@@ -4,8 +4,6 @@
 
 # You can return the answer in any order.
 
- 
-
 # Example 1:
 
 # Input: nums = [2,7,11,15], target = 9
@@ -24,22 +22,13 @@
 
 
 def twoSum(arr, target):
-
-    numDict = {}
-
-    for i in range(len(arr)):
-        if target - arr[i] in numDict:
-            return ([numDict[target - arr[i]], i])
-        numDict[arr[i]] = i
-            
-print(twoSum([2, 7, 11, 15], 9))
-
-def twoSumi(nums, target):
     seen = {}
-    for i, value in enumerate(nums): #1
-        remaining = target - nums[i] #2
-        
-        if remaining in seen: #3
-            return [i, seen[remaining]]  #4
-        else:
-            seen[value] = i  #5
+
+    for i, num in enumerate(arr):
+        if target - num in seen:
+            return [seen[target-num], i]
+        elif num not in seen:
+            seen[num] = i
+
+nums = [2,7,11,15]
+print(twoSum(nums, 9))

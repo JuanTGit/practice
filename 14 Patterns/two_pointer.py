@@ -2,6 +2,21 @@
 lst[left], lst[right] = lst[right], lst[left]
 Continue to swap until the left index is greater than the right index
 """
+"""
+WHEN TO USE TWO POINTERS:
+    It will feature problems where you deal with sorted arrays (or Linked Lists) and need to find a set of elements that fulfill certain constraints.
+
+    The set of elements in the array is a pair, a triplet, or even a subarray.
+
+Here are some problems that feature the Two Pointer pattern:
+
+    Squaring a sorted array (easy)
+    Triplets that sum to zero (medium)
+    Comparing strings that contain backspaces (medium)
+    
+"""
+
+
 #Create an inplace function.
 def reverse_inplace(lst):
     # Create pointers for our left and right indices.
