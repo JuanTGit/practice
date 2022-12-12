@@ -91,3 +91,23 @@ alist = [2,7,11,15]
 
 for i, num in enumerate(alist):
     print(i, num)
+
+
+
+# Lambda Function
+"""
+lamda arguments : expression
+"""
+x = lambda a : a + 10
+print(x(5))
+# returns 15
+x = lambda a, b : a * b
+
+def myfunc(n):
+    return lambda a : a * n
+doubler = myfunc(2)
+print(doubler(10))
+# returns 20
+
+
+
