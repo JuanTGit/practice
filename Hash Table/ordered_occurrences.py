@@ -33,9 +33,9 @@ def solution(S):
     S = S.lower()
     
     # Iterate over the length of the input string
-    for length in range(1, len(S) + 1):
+    for length in range(len(S)):
         # Iterate over all substrings of the input string that have the current length
-        for i in range(len(S) - length + 1):
+        for i in range(len(S) - length):
             substring = S[i:i+length]
             
             # Check if the substring is alphabetic (contains only letters)

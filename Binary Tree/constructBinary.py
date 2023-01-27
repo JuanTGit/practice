@@ -37,4 +37,4 @@ root.right = TreeNode(20)
 root.right.left = TreeNode(15)
 root.right.right = TreeNode(7)
 
-print(root.buildTree([3,9,20,15,7], [9,3,15,20,7]))
+print(root.val)

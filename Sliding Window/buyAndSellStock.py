@@ -32,3 +32,16 @@ def maxProfit(prices):
     return max_profit
 
 print(maxProfit([7,1,5,3,6,4]))
+
+def maxProfit2(prices):
+    l = 0
+    max_profit = 0
+    for r in range(len(prices)):
+        if prices[l] < prices[r]:
+            profit = prices[r] - prices[l]
+            max_profit = max(max_profit, profit)
+        else:
+            l = r
+    return max_profit
+
+print(maxProfit2([7,1,5,3,6,4,20,1,22]))

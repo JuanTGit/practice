@@ -23,3 +23,17 @@
 
 # Input: s = "paper", t = "title"
 # Output: true
+
+
+def isIsomorphic(s, t):
+    dicS, dicT = {}, {}
+
+    for i, val in enumerate(s):
+        dicS[val] = dicS.get(val, []) + [i]
+    for i, val in enumerate(t):
+        dicT[val] = dicT.get(val, []) + [i]
+    print(dicS, dicT)
+    print(sorted(dicS.values()), sorted(dicT.values()))
+
+
+print(isIsomorphic('egg', 'add'))
