@@ -21,8 +21,7 @@
 nums = [4, 5, 3, 6]
 #      [0, 1, 2, 3]
 def productArray(nums):
-    res = [1] * (len(nums))
-    #res =[90, 72, 120, 60] 360
+    res = [1] * (len(nums)) 
     prefix = 1
     for i in range(len(nums)):
         res[i] = prefix

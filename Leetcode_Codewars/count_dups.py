@@ -21,8 +21,8 @@ def countDups(s):
 
     for i in s.lower():
         hashtable[i] = hashtable.get(i, 0) + 1
-    for i in hashtable:
-        if hashtable[i] > 1:
+    for i in hashtable.values():
+        if i > 1:
             count += 1
     return count
 
