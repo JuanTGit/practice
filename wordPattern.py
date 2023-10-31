@@ -35,4 +35,22 @@ def wordPattern(p, s):
     return True
 
 
-print(wordPattern('aaaa', 'dog cat cat dog'))
+# print(wordPattern('aaaa', 'dog cat cat dog'))
+
+def checkPractice(pattern, s):
+    word = s.split(' ')
+    wordMap = {}
+
+    if len(pattern) != len(word): return False
+    if len(set(pattern)) != len(set(word)): return False
+
+    for i in range(len(word)):
+        if word[i] not in wordMap:
+            wordMap[word[i]] = pattern[i]
+        elif wordMap[word[i]] != pattern[i]:
+            return False
+    return True
+
+
+
+print(checkPractice('baab', 'dog cat cat dog'))
