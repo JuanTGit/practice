@@ -4,6 +4,7 @@ function checkNumX2(arr){
     const checked = {};
 
     for (let num = 0; num < arr.length; num++){
+        // JavaScript returrs undefined if an item or object isn't found
         if (checked[arr[num] * 2] !== undefined || checked[arr[num] / 2] !== undefined){
             return true;
         }
