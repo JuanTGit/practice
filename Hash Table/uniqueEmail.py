@@ -45,13 +45,13 @@ def uniqueEmails(emails):
 
     for e in emails:
         i, local = 0, ''
-        while e[i] != ['@', '+']:
+        while e[i] != '@' or e[i] != '+':
             if e[i] != '.':
                 local += e[i]
             i += 1
         
         while e[i] != '@':
             i += 1
-        domain = e[[i] + 1:]
+        domain = e[i + 1:]
         unique.add((local, domain))
     return len(unique)

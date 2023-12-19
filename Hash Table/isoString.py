@@ -33,7 +33,24 @@ def isIsomorphic(s, t):
     for i, val in enumerate(t):
         dicT[val] = dicT.get(val, []) + [i]
     print(dicS, dicT)
-    print(sorted(dicS.values()), sorted(dicT.values()))
+    return sorted(dicS.values()) == sorted(dicT.values())
 
 
 print(isIsomorphic('egg', 'add'))
+
+
+def isomorphicString(s, t):
+    # Create a hashtable for each of our strings.
+    dictST, dictTS = {}, {}
+
+    # Compare each character in both strings
+    for c1, c2 in zip(s, t):
+        if (c1 in dictST and dictST[c1] != c2) or (c2 in dictTS and dictST[c2] != c1):
+            return False
+        dictST[c1] = c2
+        dictTS[c2] = c1
+    return True
+
+
+s1 = 'egg'
+s2 = 'add'
