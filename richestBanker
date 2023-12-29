@@ -1,0 +1,12 @@
+bankers = [[7,3], [1,4,2], [9,4]]
+
+def richestBanker(bank):
+    richest = 0
+
+    for i in bank:
+        richest = max(richest, sum(i))
+    return richest
+            
+
+
+print(richestBanker(bankers))
