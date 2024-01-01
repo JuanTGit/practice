@@ -15,6 +15,8 @@ def insertionSort(array):
 
 randArray = [-1, -2, -8, -3, 5]
 
-for i in range(1, len(randArray)):
-    # if i > 0:
-    print(randArray[i])
+# for i in range(1, len(randArray)):
+#     # if i > 0:
+#     print(randArray[i])
+
+print(insertionSort(randArray))
