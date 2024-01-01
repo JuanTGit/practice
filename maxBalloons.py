@@ -18,3 +18,16 @@
 # Input: text = "leetcode"
 # Output: 0
 
+def maxNumBalloon(text):
+    strs = ['b', 'a', 'l', 'o', 'n']
+    counts = [0] * 5
+
+    for i in range(5):
+        counts[i] = text.count(strs[i])
+        
+    counts[2] = counts[2] // 2
+    counts[3] = counts[3] // 2
+
+    return min(counts)
+
+print(maxNumBalloon("loonbalxballpoon"))
