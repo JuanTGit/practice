@@ -10,3 +10,8 @@ def richestBanker(bank):
 
 
 print(richestBanker(bankers))
+
+def richest(accounts):
+    return max([sum(i) for i in accounts])
+
+print(richest(bankers))
