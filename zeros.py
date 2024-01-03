@@ -14,4 +14,21 @@ def moveZeros(arr):
             zeros.append(arr.pop(i))
     return arr + zeros
 
-print(moveZeros([11,2,3,4,0,0]))
+# print(moveZeros([11,2,3,4,0,0]))
+
+
+# Modify list in place
+
+def moveZerosIP(arr):
+    left = 0
+
+    for right in range(len(arr)):
+        if arr[right] != 0 and arr[left] == 0:
+            arr[right], arr[left] = arr[left], arr[right]
+        
+        if arr[left] != 0:
+            left += 1
+    
+    return arr
+
+print(moveZerosIP([0,1,0,4,6,28]))
