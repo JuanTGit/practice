@@ -7,3 +7,6 @@ def abbrev_name(name):
     return '.'.join(output)
 
 print(abbrev_name('Rachel Smith'))
+
+def nonAbrevName(noName):
+    
