@@ -21,9 +21,9 @@
  
 
 var argumentsLength = function(args) {
-    for (var i = 0; i <= args.length; i++){
-    } return i - 1
+    for (var i = 0; i < args.length; i++){
+		console.log(args[i])
+    } return i
 };
 
 console.log(argumentsLength(['1', 'r', '3as']))
-// console.log('Hello')
