@@ -27,8 +27,18 @@ def twoSum(arr, target):
     for i, num in enumerate(arr):
         if target - num in seen:
             return [seen[target-num], i]
-        elif num not in seen:
-            seen[num] = i
+        seen[num] = i
+        print(seen)
 
 nums = [2,7,11,15]
 print(twoSum(nums, 9))
+
+def twoSumTwo(nums, target):
+    hashtable = {}
+
+    for num in range(len(nums)):
+        if target - nums[num] in hashtable:
+            return [num, hashtable[target - nums[num]]]
+        hashtable[nums[num]] = num
+
+# print(twoSumTwo(nums, 9))
