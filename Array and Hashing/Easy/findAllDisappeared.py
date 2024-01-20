@@ -64,3 +64,14 @@ def findDisappearedNumbersBF(nums):
     return output
 
 print(findDisappearedNumbersBF([1,1,1]))
+
+
+def findDisappearedNumbers(nums):
+    numSort = sorted(nums)
+    res = []
+    for i in range(1, numSort[-1] + 1):
+        if i not in nums:
+            res.append(i)
+    return res
+
+# print(findDisappearedNumbers(nums2))

@@ -45,3 +45,14 @@ def maxProfit2(prices):
     return max_profit
 
 print(maxProfit2([7,1,5,3,6,4,20,1,22]))
+
+def maxProfit3(prices):
+    max_profit = 0
+    min_price = float('inf')
+    for price in prices:
+        min_price = min(price, min_price)
+        profit = price - min_price
+        max_profit = max(max_profit, profit)
+    return max_profit
+        
+maxProfit3([1 , 5, 7, -1, 2])

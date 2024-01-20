@@ -34,3 +34,13 @@ def concatenate2(nums):
         for num in nums:
             ans.append(num)
     return ans
+
+nums = [1, 2, 1]
+
+def concatenate2(n):
+    ans = [i for i in n]
+    for i in n:
+        ans.append(i)
+    return ans
+
+print(concatenate2(nums))

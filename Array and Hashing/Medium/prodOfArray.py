@@ -34,3 +34,19 @@ def productArray(nums):
 
 
 print(productArray(nums))
+
+
+def prodOfArray2(arr):
+    n = len(arr)
+    output = [1] * n
+
+    for i in range(0, n):
+        for j in range(0, n):
+            if i != j:
+                output[i] = output[i] * arr[j]
+        
+
+    return output
+
+
+print(prodOfArray2([1, 2, 3, 4]))
