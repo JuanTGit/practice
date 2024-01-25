@@ -28,14 +28,13 @@
 # Explanation: We can pick from trees [2,3,2,2].
 # If we had started at the first tree, we would only pick from trees [1,2].
 fruits = [1,2,3,2,2]
-from collections import defaultdict
 
 def totalFruits(fruits):
-    count = defaultdict(int)
+    count = {}
     l, total, res = 0, 0, 0
 
     for r in range(len(fruits)):
-        count[fruits[r]] += 1
+        count[fruits[r]] = count.get(fruits[r], 0) + 1
         total += 1
 
         while len(count) > 2:
