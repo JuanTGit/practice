@@ -18,6 +18,16 @@
 # Output: 0
 # Explanation: In this case, no transactions are done and the max profit = 0.
 
+# Brute Force
+def maxProfitBF(prices):
+	res = 0
+
+	for i in range(len(prices) - 1):
+		for j in range(i+1, len(prices)):
+			current = prices[j] - prices[i]
+			res = max(res, current)
+	return res
+
 def maxProfit(prices):
     l, r = 0, 1
     max_profit = 0
