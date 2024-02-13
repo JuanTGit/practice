@@ -1,4 +1,4 @@
-import requests
+import requests, json
 
 class Pokemon:
 
@@ -12,6 +12,7 @@ class Pokemon:
 		r = requests.get(request_url)
 		
 		if r.ok:
+			print(r.json())
 			return r.json()
 		else:
 			print('Pokemon name invalid')

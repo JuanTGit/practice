@@ -21,6 +21,21 @@
 # Input: target = 11, nums = [1,1,1,1,1,1,1,1]
 # Output: 0
 
+# Brute Force
+def minSub(nums, target):
+	res = float('inf')
+	total = 0
+
+	for n in range(len(nums)):
+		for j in range(n, len(nums)):
+			total += nums[j]
+			if total >= target:
+				res = min(res, j - n + 1)
+				break
+		total = 0
+	return res if res != float('inf') else 0
+
+# Sliding Window
 def minSubArrayLength(t, nums):
     res = float('inf')
     l = 0
@@ -34,9 +49,6 @@ def minSubArrayLength(t, nums):
             l += 1
     return res if res != float('inf') else 0
 # print(minSubArrayLength(7, [2,3,1,2,4,3]))
-
-
-
 
 def minSubArrayLen(t, nums):
     res = float('inf')

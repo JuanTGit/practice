@@ -18,6 +18,15 @@
 # Input: nums = [1,2,3,1,2,3], k = 2
 # Output: false
 
+# Brute Force O(n^2)
+def containsNearbyDuplicatesBF(nums, k):
+
+	for i in range(len(nums) - 1):
+		for j in range(i+1, len(nums)):
+			if nums[i] == nums[j] and abs(i - j) <= k:
+				return True
+	return False
+
 nums = [1,2,3,1,2,3]
 
 def containsNearbyDuplicates(nums, k):
@@ -30,6 +39,7 @@ def containsNearbyDuplicates(nums, k):
             l += 1
         if nums[r] in window:
             return True
+        window.add(nums[r])
     return False
     
 
