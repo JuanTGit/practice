@@ -45,4 +45,4 @@ def numPairs(nums):
     return pairs
 
 
-print(numPairs([1,2,3,1,1,3]))
+print(numPairs([1,1]))
