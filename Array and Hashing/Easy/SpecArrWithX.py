@@ -39,4 +39,3 @@ def specialArray(nums):
 		if i == totalRight:
 			return totalRight
 	return -1
-		
