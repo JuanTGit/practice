@@ -31,6 +31,6 @@ def validParenthesis(s):
     for i in s:
         if i in openToClose:
             stack.append(i)
-        elif stack == 0 or openToClose[stack.pop()] != i:
+        elif len(stack) == 0 or openToClose[stack.pop()] != i:
             return False
     return len(stack) == 0
