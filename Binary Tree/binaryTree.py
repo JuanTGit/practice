@@ -31,6 +31,18 @@ class TreeNode:
             self.left.postOrderTraversal()
         if self.right:
             self.right.postOrderTraversal()
+
+
+    def numLeafNodes(self):
+        def countLeaves(root):
+            if root == None:
+                return 0
+            if root.left == None and root.right == None:
+                return 1
+            return countLeaves(root.left) + countLeaves(root.right)
+        
+        return countLeaves(self)
+        
     
     
 
@@ -43,4 +55,5 @@ tree.insertValue(10)
 tree.insertValue(37)
 tree.insertValue(14)
 
-tree.inOrderTraversal()
+# tree.inOrderTraversal()
+print(tree.numLeafNodes())
