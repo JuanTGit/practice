@@ -38,4 +38,17 @@ def canConstruct(ransomNote, magazine):
 	return True
 
 
-print(canConstruct("aca", "aab"))
+# print(canConstruct("aca", "aab"))
+
+def canConstructTwo(ransomNote, magazine):
+	charCount = [0] * 26
+
+	for char in magazine:
+		charCount[ord(char) - ord('a')] += 1
+
+	for char in ransomNote:
+		charCount[ord(char) - ord('a')] -= 1
+		if charCount[ord(char) - ord('a')] < 0:
+			return False
+	return True
+print(canConstructTwo("aca", "aaasdfcasdgb"))
