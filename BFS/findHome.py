@@ -41,5 +41,25 @@ def dfs(graph, start, goal, visited=None):
                 dfs(graph, neighbor, goal, visited)
 
 
+def dfsIterative(graph, start, goal):
+	stack = [start]
+	visited = set()
 
-print(bfs(graph, 'A', 'E'))
+	while stack:
+		current_node = stack.pop()
+
+		if current_node == goal:
+			print(f'Goal {goal} found!')
+			return True
+		
+		if current_node not in visited:
+			visited.add(current_node)
+
+			for neighbor in reversed(graph[current_node]):
+				if neighbor not in visited:
+					stack.append(neighbor)
+
+	return False
+
+
+print(dfsIterative(graph, 'A', 'E'))
