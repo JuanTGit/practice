@@ -8,13 +8,14 @@ matrix = [
 
 def transposeMatrix(matrix):
     
-	res = []
+	res = [[] for _ in range(len(matrix[0]))]
+	print(res)
 
-	for row in matrix:
-		# print(row)
-		for col in row:
-			print(col)
-		print('----------')
+	# for row in matrix:
+	# 	print(row)
+	# 	for col in row:
+	# 		print(col)
+	# 	print('----------')
 
 
 print(transposeMatrix(matrix))
