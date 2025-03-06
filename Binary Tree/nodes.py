@@ -22,12 +22,39 @@ node4.left = node8
 node4.right = node9
 
 
-def searchRight(root):
-	current = root
+def searchTree(root):
+	if not root:
+		return 0
+	# Preorder Traversal
+		# Visit node - Traverse Left - Traverse Right
+	print(f'value: {root.val}')
 
-	while current:
+	return 1 + searchTree(root.left) + searchTree(root.right)
+
+
+
+# print(searchTree(root))
+
+def iterativeTree(root):
+	if not root:
+		return 0
+	
+	count = 0
+
+	stack = [root]
+
+	while stack:
+		current = stack.pop()
 		print(current.val)
-		current = current.left
 
+		count += 1
 
-searchRight(root)
+		if current.right:
+			stack.append(current.right)
+		if current.left:
+			stack.append(current.left)
+
+	return count
+
+print(iterativeTree(root))
+
