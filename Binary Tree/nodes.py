@@ -38,9 +38,10 @@ def searchTree(root):
 def iterativeTree(root):
 	if not root:
 		return 0
-	
+
 	count = 0
 
+	# Stack to pull from left to right LIFO
 	stack = [root]
 
 	while stack:
