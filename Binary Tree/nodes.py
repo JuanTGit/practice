@@ -1,3 +1,4 @@
+from collections import deque
 from tree import TreeNode
 
 root = TreeNode(1)
@@ -20,6 +21,58 @@ node3.left = node6
 node3.right = node7
 node4.left = node8
 node4.right = node9
+
+
+
+def inorderTraversal(root):
+
+	stack = [root]
+
+	while stack:
+		current = stack.pop()
+		print(current.val)
+
+		if current.right:
+			stack.append(current.right)
+		if current.left:
+			stack.append(current.left)
+
+# inorderTraversal(root)
+
+
+
+def bfs(root):
+
+	queue = deque()
+	queue.append(root)
+
+	while queue:
+
+		current = queue.popleft()
+		print(current.val)
+		if current.left:
+			queue.append(current.left)
+		if current.right:
+			queue.append(current.right)
+
+bfs(root)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def searchTree(root):
@@ -57,7 +110,8 @@ def iterativeTree(root):
 
 	return count
 
-print(iterativeTree(root))
+# print(iterativeTree(root))
+
 
 def breadthFirstSearch(root):
 	pass
