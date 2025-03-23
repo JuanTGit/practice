@@ -8,14 +8,21 @@ array = [
 
 
 def spiralTraverse(array):
+	colLen = len(array[0])-1
+	rowLen = len(array)-1
 
 	seen = set()
 
 	for r in range(len(array)):
-		print(f"Row: {r}")
+		# print(f"Row: {r}")
 
 		for c in range(len(array[r])):
-			print(c)
+			if c == colLen:
+				pass
+
+			# if (r,c) in seen:
+
+			# seen.add((r,c))
 
 
 print(spiralTraverse(array))
