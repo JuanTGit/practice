@@ -8,8 +8,10 @@ array = [
 
 
 def spiralTraverse(array):
-	colLen = len(array[0])-1
-	rowLen = len(array)-1
+	right = True
+	left = False
+	up = False
+	down = False
 
 	seen = set()
 
