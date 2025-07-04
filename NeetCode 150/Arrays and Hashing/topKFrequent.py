@@ -17,8 +17,6 @@ def topKFrequent(nums, k):
 			if len(result) == k:
 				return result
 
-	return result
-
 		
 	
 	

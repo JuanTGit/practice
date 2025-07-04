@@ -36,23 +36,38 @@ words = ["aba","bcb","ece","aa","e"]
 queries = [[0,2],[1,4],[1,1]]
 
 def vowelStrings(words, queries):
-    vowels = {'a','e','i','o','u'}
-    res = [0 for _ in range(len(queries))]
+    vowel_set = set("aeiou")
+    prefix_cnt = [0] * (len(words) + 1)
+    prev = 0
 
-    for i, word in enumerate(words):
-        if word[0] in vowels and word[-1] in vowels:
-            words[i] = True
-        else:
-            words[i] = False
+    for i, w in enumerate(words):
+        if w[0] in vowel_set and w[-1] in vowel_set:
+            prev += 1
+        prefix_cnt[i + 1] = prev
 
-    for i, query in enumerate(queries):
-        for word in words[query[0]:query[1]+1]:
-            if word == True:
-                res[i] += 1
+    res = [0] * len(queries)
+    for i, q in enumerate(queries):
+        l, r = q
+        res[i] = prefix_cnt[r + 1] - prefix_cnt[l]
 
     return res
 
 
 
-
 print(vowelStrings(words, queries))
+
+
+
+# Brute force:
+
+# def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
+#     vowels = {'a','e','i','o','u'}
+#     res = [0] * len(queries)
+
+#     for i, query in enumerate(queries):
+#         queryList = words[query[0]:query[1]+1]
+        
+#         for word in queryList:
+#             if word[0] in vowels and word[-1] in vowels:
+#                 res[i] += 1
+#     return res
