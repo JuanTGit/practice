@@ -47,6 +47,6 @@ def isValid(s):
         elif len(stack) < 1 or validation[stack.pop()] != par:
             return False
         
-    return True
+    return len(stack) == 0
 
 print(isValid("]"))
