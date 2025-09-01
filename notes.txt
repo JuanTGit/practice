@@ -1,0 +1,29 @@
+LeetCode Approach:
+
+Systematic Approach
+
+1.) Simplify Problem
+
+    - Given inputs -> Expected outputs
+        * "The inputs are ____. We do ____ to the inputs. We get ____ as the output."
+    
+    - Ask questions and catch edge cases.
+
+2.) Pattern Recognition
+
+    - Straight forward solution
+        * Identify time and space and find optimizations
+
+3.) Implementation Plan
+
+
+4.) Code
+
+
+5.) Debug
+
+    - Syntax Error
+
+    - Implementation Error
+        * Not many test failed (check edge cases)
+        * Else mistake in Implementation (add print statements)
