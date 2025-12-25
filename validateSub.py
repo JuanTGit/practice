@@ -2,7 +2,7 @@ def isValidSubsequence(array, sequence):
     l = 0
     for l2 in range(len(array)):
         if sequence[l] == array[l2]:
-            if l == len(seq):
+            if l == len(sequence):
                 return True
             else:
                 l += 1
