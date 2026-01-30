@@ -54,4 +54,20 @@ def rotate(nums, k):
 	return nums
 
 
-print(rotate(nums, k))
+# print(rotate(nums, k))
+
+nums = [1,2,3,4,5,6,7]; k = 3
+
+def rotate5(nums, k):
+	def twoPointer(l, r):
+		while r > l:
+			nums[l], nums[r] = nums[r], nums[l]
+			l, r = l + 1, r - 1
+
+	twoPointer(0, k - 1)
+
+	twoPointer(k, len(nums) - 1)
+
+	return nums
+
+print(rotate5(nums, k))
