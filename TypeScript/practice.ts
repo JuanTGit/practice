@@ -54,9 +54,9 @@ console.log("===============Async Functions with Types===============")
 
 interface PriceData {
 	high: number;
-	hightTime: number;
+	hightTime?: number; // optional — might use it later
 	low: number;
-	lowTime: number;
+	lowTime?: number; // optional — might use it later
 }
 
 async function getItemPrice(itemId: number): Promise<PriceData> {
@@ -76,3 +76,33 @@ getItemPrice(4151).then(price => {
 	// console.log(price);
 	console.log(`${price.high.toLocaleString()} gp`);
 })
+
+
+/* 
+Arrays and Optional Properties
+*/
+console.log("===============Arrays and Optional Properties===============")
+
+const itemIds: number[] = [4151, 383, 11802];
+const itemNames: string[] = ['Abyssal whip', 'Raw shark', 'Armadyl godsword'];
+
+
+const lastHistory: PriceData[] = [];
+
+lastHistory.push({ high: 4500, low: 4000 });
+lastHistory.push({ high: 4200, low: 3800 });
+
+
+interface PriceHistory {
+	itemId: number;
+	high: number;
+	low: number;
+	timestamp?: Date;
+}
+
+const history: PriceHistory[] = [];
+
+history.push({ itemId: 4151, high: 4500, low: 4000 });
+history.push({ itemId: 4151, high: 4700, low: 4300, timestamp: new Date() });
+
+console.log(history);
